@@ -1,0 +1,132 @@
+:root {
+    --color-paragraph: #38196B;
+    --color-link: #000000;
+    --color-background-content: #F4EDFF;
+    --color-container-wrapper: #fff;
+    --color-background-bell: linear-gradient(135deg, #9AB0FF 0%, #EB73FF 100%);
+    --color-button-hover: #F4EDFF;
+    --color-button1: #FF1212;
+    --color-border-button1: #FFB2B2;
+    --color-button2: #0ABE31;
+    --color-border-button2: #9EEBAF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+p {
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: var(--color-paragraph);
+    width: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.link {
+    color: var(--color-link);
+}
+
+#content {
+    height: 100vh;
+    background: var(--color-background-content);
+}
+
+.container-wrapper {
+    background: var(--color-container-wrapper);
+    padding: 70px 32px 32px 32px;
+    border-radius: 24px;
+}
+
+.close {
+    padding: 8px;
+    background-color: var(--color-background-content);
+    border-radius: 50%;
+    width: fit-content;
+    position: absolute;
+    right: 32px;
+    top: 23px;
+    cursor: pointer;
+
+    img {
+        max-width: 20px;
+        margin-top: -2px;
+        margin-right: -1px;
+    }
+}
+
+.bell {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .image {
+        background: var(--color-background-bell);
+        border-radius: 10px;
+        width: fit-content;
+        padding: 12px;
+
+        img {
+            width: 32px;
+        }
+    }
+}
+
+.buttons {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+
+    .actions {
+        padding: 10px 24px;
+        font-weight: 600;
+        border-radius: 8px;
+        color: var(--color-button1);
+        border: solid 1px var(--color-border-button1);
+    
+        &:hover {
+            background: var(--color-button-hover);
+        }
+    
+        &.alternative {
+            color: var(--color-button2);
+            border: solid 1px var(--color-border-button2);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .container-wrapper {
+        padding: 63px 32px 55px 71px;
+        min-width: 550px;
+    }
+
+    .close {
+        padding: 11px;
+        
+        img {
+            max-width: unset;
+            margin-top: 0;
+            margin-right: 0;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
